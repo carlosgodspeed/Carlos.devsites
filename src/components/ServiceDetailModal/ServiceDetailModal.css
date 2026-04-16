@@ -1,0 +1,69 @@
+.modal__content {
+  max-width: 680px !important;
+  max-height: 90vh;
+  padding: 0 !important;
+  background: var(--bg-card) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 20px !important;
+  overflow: hidden;
+}
+
+.modal__header {
+  padding: 1.5rem 2rem 0;
+}
+
+.modal__title {
+  font-size: 1.5rem !important;
+  font-weight: 800 !important;
+}
+
+.modal__scroll {
+  max-height: calc(90vh - 120px);
+  padding: 0 2rem;
+}
+
+.modal__body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-bottom: 2rem;
+}
+
+.modal__description {
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.modal__section-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.modal__list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.modal__list-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  color: white;
+  font-size: 0.95rem;
+}
+
+.modal__check-icon {
+  color: rgb(33, 187, 248);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.modal__cta {
+  width: 100%;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
