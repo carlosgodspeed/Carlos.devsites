@@ -1,45 +1,40 @@
 .differentials {
-  padding: 6rem 0 8rem;
   position: relative;
+  padding: 7rem 0;
+  background: var(--bg-secondary);
   overflow: hidden;
 }
 
-.differentials__orb-1 {
+.differentials__orb-1,
+.differentials__orb-2 {
   position: absolute;
-  top: 0;
-  right: -100px;
-  width: 400px;
-  height: 400px;
-  background: radial-gradient(circle, rgba(33, 187, 248, 0.1) 0%, transparent 70%);
   border-radius: 50%;
-  filter: blur(40px);
-  animation: float 8s ease-in-out infinite;
+  filter: blur(100px);
+  pointer-events: none;
+  opacity: 0.25;
+}
+
+.differentials__orb-1 {
+  top: -100px; left: -100px;
+  width: 400px; height: 400px;
+  background: var(--color-primary);
 }
 
 .differentials__orb-2 {
-  position: absolute;
-  bottom: 0;
-  left: -100px;
-  width: 350px;
-  height: 350px;
-  background: radial-gradient(circle, rgba(6, 182, 212, 0.1) 0%, transparent 70%);
-  border-radius: 50%;
-  filter: blur(40px);
-  animation: float 10s ease-in-out infinite reverse;
+  bottom: -100px; right: -100px;
+  width: 350px; height: 350px;
+  background: var(--color-accent);
 }
 
 .differentials__inner {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
   align-items: center;
-  position: relative;
-  z-index: 1;
 }
 
-.differentials__content-header {
-  margin-bottom: 3rem;
-}
+.differentials__content-header { margin-bottom: 2.5rem; }
 
 .differentials__list {
   display: flex;
@@ -49,126 +44,110 @@
 
 .differentials__item {
   display: flex;
-  gap: 1rem;
-  align-items: flex-start;
+  gap: 1.25rem;
+  padding: 1.25rem;
+  border-radius: 12px;
+  transition: all 0.4s;
+}
+
+.differentials__item:hover {
+  background: rgba(212,175,55,0.04);
+  transform: translateX(6px);
 }
 
 .differentials__item-icon {
   flex-shrink: 0;
-  width: 48px;
-  height: 48px;
-  border-radius: 14px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
-}
-
-.differentials__item:nth-child(1) .differentials__item-icon {
-  background: rgba(33, 187, 248, 0.15);
+  width: 48px; height: 48px;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 12px;
+  background: rgba(212,175,55,0.1);
+  border: 1px solid var(--border-color-hover);
   color: var(--color-primary-light);
 }
 
-.differentials__item:nth-child(2) .differentials__item-icon {
-  background: rgba(6, 182, 212, 0.15);
-  color: var(--color-accent-light);
-}
-
-.differentials__item:nth-child(3) .differentials__item-icon {
-  background: rgba(244, 63, 94, 0.15);
-  color: var(--color-rose-light);
-}
-
-.differentials__item:nth-child(4) .differentials__item-icon {
-  background: rgba(245, 158, 11, 0.15);
-  color: var(--color-amber);
-}
-
-.differentials__item:hover .differentials__item-icon {
-  transform: scale(1.1) rotate(-5deg);
-}
-
 .differentials__item-title {
-  font-size: 1.1rem;
-  font-weight: 700;
-  margin-bottom: 0.25rem;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  color: var(--text-primary);
 }
 
 .differentials__item-desc {
   color: var(--text-secondary);
-  font-size: 0.9rem;
+  font-size: 0.93rem;
   line-height: 1.6;
 }
 
-/* Code Visual */
 .differentials__visual {
   position: relative;
+  display: flex;
+  justify-content: center;
 }
 
 .differentials__code-card {
-  background: rgba(10, 10, 10, 0.8);
-  backdrop-filter: blur(20px);
-  border: 1px solid var(--border-color);
-  border-radius: 24px;
-  padding: 2.5rem;
   position: relative;
+  width: 100%;
+  max-width: 460px;
+  background: linear-gradient(160deg, #0d0d10, #050505);
+  border: 1px solid var(--border-color-hover);
+  border-radius: 14px;
   overflow: hidden;
+  box-shadow: var(--shadow-premium);
 }
 
 .differentials__code-dots {
   display: flex;
   gap: 0.5rem;
-  margin-bottom: 1.5rem;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--border-color);
+  background: rgba(0,0,0,0.4);
 }
 
 .differentials__code-dot {
-  width: 12px;
-  height: 12px;
+  width: 12px; height: 12px;
   border-radius: 50%;
 }
 
-.differentials__code-dot--red { background: #ef4444; }
-.differentials__code-dot--yellow { background: #f59e0b; }
-.differentials__code-dot--green { background: #10b981; }
+.differentials__code-dot--red { background: #ff5f57; }
+.differentials__code-dot--yellow { background: #febc2e; }
+.differentials__code-dot--green { background: #28c840; }
 
 .differentials__code-content {
-  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  padding: 1.5rem;
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
   font-size: 0.9rem;
-  line-height: 2;
+  line-height: 1.9;
 }
 
-.differentials__code-keyword { color: var(--color-primary-light); }
-.differentials__code-var { color: var(--text-primary); }
-.differentials__code-string { color: var(--color-accent-light); }
-.differentials__code-bracket { color: var(--color-amber); }
+.differentials__code-keyword { color: #c4b5fd; }
+.differentials__code-var { color: #f5d061; }
 .differentials__code-punct { color: var(--text-muted); }
-.differentials__code-bool { color: var(--color-rose-light); }
+.differentials__code-bracket { color: var(--text-primary); }
+.differentials__code-string { color: #a8e6a3; }
+.differentials__code-bool { color: #f5d061; font-style: italic; }
+
+.differentials__code-glow-1,
+.differentials__code-glow-2 {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  pointer-events: none;
+}
 
 .differentials__code-glow-1 {
-  position: absolute;
-  top: -20px;
-  right: -20px;
-  width: 100px;
-  height: 100px;
-  background: rgba(33, 187, 248, 0.2);
-  border-radius: 20px;
-  filter: blur(30px);
-  animation: pulseGlow 3s ease-in-out infinite;
+  top: -30px; right: -30px;
+  width: 150px; height: 150px;
+  background: rgba(212,175,55,0.4);
 }
 
 .differentials__code-glow-2 {
-  position: absolute;
-  bottom: -20px;
-  left: -20px;
-  width: 80px;
-  height: 80px;
-  background: rgba(6, 182, 212, 0.15);
-  border-radius: 20px;
-  filter: blur(30px);
-  animation: pulseGlow 4s ease-in-out infinite reverse;
+  bottom: -30px; left: -30px;
+  width: 120px; height: 120px;
+  background: rgba(167,139,250,0.3);
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 900px) {
   .differentials__inner {
     grid-template-columns: 1fr;
     gap: 3rem;

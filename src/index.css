@@ -3,58 +3,57 @@
 @tailwind utilities;
 
 :root {
-  --bg-primary: #000000;
-  --bg-secondary: #050505;
-  --bg-card: #0a0a0a;
-  --bg-card-hover: #111111;
-  
-  --color-primary: #21bbf8;
-  --color-primary-light: #5fcffb;
-  --color-primary-dark: #0e9dd6;
-  --color-accent: #06b6d4;
-  --color-accent-light: #22d3ee;
-  --color-rose: #f43f5e;
-  --color-rose-light: #fb7185;
-  --color-amber: #f59e0b;
-  --color-emerald: #10b981;
-  
-  --text-primary: #f1f5f9;
-  --text-secondary: #94a3b8;
-  --text-muted: #64748b;
-  
-  --border-color: rgba(255, 255, 255, 0.06);
-  --border-color-hover: rgba(33, 187, 248, 0.3);
-  
-  --gradient-primary: linear-gradient(135deg, #21bbf8 0%, #06b6d4 100%);
-  --gradient-accent: linear-gradient(135deg, #f43f5e 0%, #f59e0b 100%);
-  --gradient-glow: linear-gradient(135deg, rgba(33, 187, 248, 0.2) 0%, rgba(6, 182, 212, 0.2) 100%);
-  
-  --shadow-glow: 0 0 30px -15px rgba(33, 187, 248, 0.3);
-  --shadow-card: 0 4px 20px -5px rgba(0, 0, 0, 0.8);
-  --shadow-card-hover: 0 8px 30px -5px rgba(0, 0, 0, 0.9);
-  
+  /* ===== PREMIUM PALETTE: Obsidian + Champagne Gold + Amethyst ===== */
+  --bg-primary: #050505;
+  --bg-secondary: #0a0a0c;
+  --bg-card: #101014;
+  --bg-card-hover: #15151b;
+
+  --color-primary: #d4af37;          /* champagne gold */
+  --color-primary-light: #f5d061;    /* lighter gold */
+  --color-primary-dark: #a8861f;
+  --color-accent: #a78bfa;           /* amethyst */
+  --color-accent-light: #c4b5fd;
+  --color-ivory: #f5efe0;
+
+  --text-primary: #f5efe0;
+  --text-secondary: #a8a29e;
+  --text-muted: #6b6660;
+
+  --border-color: rgba(212, 175, 55, 0.08);
+  --border-color-hover: rgba(212, 175, 55, 0.4);
+
+  --gradient-primary: linear-gradient(135deg, #f5d061 0%, #d4af37 50%, #a8861f 100%);
+  --gradient-accent: linear-gradient(135deg, #d4af37 0%, #a78bfa 100%);
+  --gradient-glow: linear-gradient(135deg, rgba(212, 175, 55, 0.18) 0%, rgba(167, 139, 250, 0.12) 100%);
+
+  --shadow-glow: 0 0 40px -10px rgba(212, 175, 55, 0.4);
+  --shadow-card: 0 10px 40px -15px rgba(0, 0, 0, 0.9);
+  --shadow-card-hover: 0 20px 60px -15px rgba(212, 175, 55, 0.25);
+  --shadow-premium: 0 30px 80px -30px rgba(212, 175, 55, 0.5);
+
   --radius: 0.75rem;
 
   /* shadcn tokens */
-  --background: 0 0% 0%;
-  --foreground: 210 40% 98%;
-  --card: 0 0% 4%;
-  --card-foreground: 210 40% 98%;
-  --popover: 0 0% 4%;
-  --popover-foreground: 210 40% 98%;
-  --primary: 199 94% 55%;
-  --primary-foreground: 0 0% 100%;
-  --secondary: 0 0% 4%;
-  --secondary-foreground: 210 40% 98%;
-  --muted: 0 0% 4%;
-  --muted-foreground: 215 20% 65%;
-  --accent: 199 94% 55%;
-  --accent-foreground: 0 0% 100%;
+  --background: 240 10% 2%;
+  --foreground: 42 50% 92%;
+  --card: 240 10% 6%;
+  --card-foreground: 42 50% 92%;
+  --popover: 240 10% 6%;
+  --popover-foreground: 42 50% 92%;
+  --primary: 46 65% 52%;
+  --primary-foreground: 240 10% 4%;
+  --secondary: 240 10% 8%;
+  --secondary-foreground: 42 50% 92%;
+  --muted: 240 10% 10%;
+  --muted-foreground: 30 8% 60%;
+  --accent: 258 90% 76%;
+  --accent-foreground: 240 10% 4%;
   --destructive: 0 84% 60%;
-  --destructive-foreground: 210 40% 98%;
-  --border: 199 33% 22%;
-  --input: 199 33% 15%;
-  --ring: 199 94% 55%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 46 30% 20%;
+  --input: 240 10% 12%;
+  --ring: 46 65% 52%;
 }
 
 /* ============ GLOBAL RESET & BASE ============ */
@@ -72,10 +71,16 @@ html {
 body {
   background-color: var(--bg-primary);
   color: var(--text-primary);
+  font-family: 'Cormorant Garamond', 'Inter', system-ui, serif;
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+  letter-spacing: -0.02em;
 }
 
 /* ============ UTILITY CLASSES ============ */

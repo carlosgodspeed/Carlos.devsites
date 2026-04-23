@@ -1,54 +1,50 @@
-import { ArrowRight, Code2, Sparkles } from "lucide-react";
+import { ArrowRight, Sparkles } from "lucide-react";
 import "./HeroSection.css";
 
 const HeroSection = () => {
   return (
     <section id="inicio" className="hero">
-      <div className="hero__bg-gradient" />
-      <div className="hero__orb-1" />
-      <div className="hero__orb-2" />
-      <div className="hero__orb-3" />
-      <div className="hero__grid" />
+      <div className="hero__noise" />
+      <div className="hero__vignette" />
 
       <div className="hero__content">
-        <br/>
-        <br/>
-        <h1 className="hero__title animate-fade-in-up delay-1">
-          Soluções digitais sob medida para o seu <span className="gradient-text">negócio</span>
+        <h1 className="hero__title animate-fade-in-up delay-2">
+          A presença digital que sua marca <span className="gradient-text">merece</span>.
         </h1>
-        <p className="hero__subtitle animate-fade-in-up delay-2">
-          <span className="gradient-text">Sites, sistemas e landing pages</span> desenvolvidos com foco em performance, experiência e crescimento.
+
+        <p className="hero__subtitle animate-fade-in-up delay-3">
+          Criamos <span className="hero__highlight">sites, landing pages e sistemas</span> sob medida —
+          projetados para impressionar, converter e elevar o padrão do seu negócio.
         </p>
-        <div className="hero__cta animate-fade-in-up delay-3">
+
+        <div className="hero__cta animate-fade-in-up delay-4">
           <a href="#contato" className="glow-button">
-            Solicitar Orçamento
+            <Sparkles size={18} />
+            Iniciar meu projeto
             <ArrowRight size={18} />
           </a>
           <a href="#projetos" className="glow-button-outline">
-            <Code2 size={18} />
-            Ver Projetos
+            Ver portfólio
           </a>
         </div>
 
-        <div className="hero__stats animate-fade-in-up delay-5">
+        <div className="hero__divider animate-fade-in delay-5" />
+
+        <div className="hero__stats animate-fade-in-up delay-6">
           <div className="hero__stat">
             <div className="hero__stat-value">10+</div>
-            <div className="hero__stat-label">Projetos Entregues</div>
+            <div className="hero__stat-label">Projetos entregues</div>
           </div>
+          <div className="hero__stat-sep" />
           <div className="hero__stat">
             <div className="hero__stat-value">3+</div>
-            <div className="hero__stat-label">Anos de Experiência</div>
+            <div className="hero__stat-label">Anos de experiência</div>
           </div>
+          <div className="hero__stat-sep" />
           <div className="hero__stat">
             <div className="hero__stat-value">100%</div>
-            <div className="hero__stat-label">Clientes Satisfeitos</div>
+            <div className="hero__stat-label">Clientes satisfeitos</div>
           </div>
-        </div>
-      </div>
-
-      <div className="hero__scroll">
-        <div className="hero__scroll-indicator">
-          <div className="hero__scroll-dot" />
         </div>
       </div>
     </section>

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X, Github, Linkedin, Instagram } from "lucide-react";
-import avatar from "@/assets/avatar.jpg";
+import avatar from "@/assets/carlosdev-logo.png";
 import "./Header.css";
 
 const Header = () => {
@@ -15,9 +15,8 @@ const Header = () => {
 
   const navItems = [
     { label: "Início", href: "#inicio" },
-    { label: "Sobre", href: "#sobre" },
     { label: "Serviços", href: "#servicos" },
-    { label: "Planos", href: "#planos" },
+    { label: "Por que ter", href: "#porque" },
     { label: "Projetos", href: "#projetos" },
     { label: "Contato", href: "#contato" },
   ];

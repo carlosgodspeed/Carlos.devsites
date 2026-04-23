@@ -1,69 +1,97 @@
 .modal__content {
-  max-width: 680px !important;
-  max-height: 90vh;
+  background: linear-gradient(160deg, #0d0d10, #050505) !important;
+  border: 1px solid var(--border-color-hover) !important;
+  border-radius: 1rem !important;
+  max-width: 720px !important;
+  max-height: 88vh;
   padding: 0 !important;
-  background: var(--bg-card) !important;
-  border: 1px solid var(--border-color) !important;
-  border-radius: 20px !important;
   overflow: hidden;
+  box-shadow: var(--shadow-premium) !important;
 }
 
 .modal__header {
-  padding: 1.5rem 2rem 0;
+  padding: 2rem 2rem 1rem;
+  border-bottom: 1px solid var(--border-color);
 }
 
 .modal__title {
-  font-size: 1.5rem !important;
-  font-weight: 800 !important;
+  font-family: 'Playfair Display', serif !important;
+  font-size: 2rem !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.02em;
 }
 
 .modal__scroll {
-  max-height: calc(90vh - 120px);
-  padding: 0 2rem;
+  max-height: calc(88vh - 100px);
 }
 
 .modal__body {
+  padding: 1.75rem 2rem 2rem;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  padding-bottom: 2rem;
+  gap: 1.75rem;
 }
 
 .modal__description {
   color: var(--text-secondary);
+  font-size: 1.02rem;
   line-height: 1.7;
 }
 
+.modal__section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
 .modal__section-title {
-  font-size: 1.1rem;
-  font-weight: 700;
-  margin-bottom: 0.75rem;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--color-primary-light);
+  position: relative;
+  padding-left: 14px;
+}
+
+.modal__section-title::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 50%;
+  transform: translateY(-50%);
+  width: 4px; height: 70%;
+  background: var(--gradient-primary);
+  border-radius: 2px;
 }
 
 .modal__list {
   list-style: none;
-  padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.6rem;
 }
 
 .modal__list-item {
   display: flex;
   align-items: flex-start;
-  gap: 0.5rem;
-  color: white;
+  gap: 0.7rem;
+  color: var(--text-secondary);
   font-size: 0.95rem;
+  line-height: 1.55;
 }
 
 .modal__check-icon {
-  color: rgb(33, 187, 248);
   flex-shrink: 0;
+  color: var(--color-primary);
   margin-top: 2px;
 }
 
 .modal__cta {
-  width: 100%;
-  justify-content: center;
-  margin-top: 0.5rem;
+  margin-top: 0.75rem;
+  align-self: flex-start;
+}
+
+@media (max-width: 640px) {
+  .modal__header { padding: 1.5rem 1.5rem 0.75rem; }
+  .modal__body { padding: 1.25rem 1.5rem 1.5rem; }
+  .modal__title { font-size: 1.5rem !important; }
 }
