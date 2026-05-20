@@ -19,7 +19,6 @@ const HeroSection = () => {
 
         <div className="hero__cta animate-fade-in-up delay-4">
           <a href="#contato" className="glow-button">
-            <Sparkles size={18} />
             Iniciar meu projeto
             <ArrowRight size={18} />
           </a>
