@@ -1,6 +1,7 @@
 import { ExternalLink, Github } from "lucide-react";
 import projectFlynet from "@/assets/project-flynet.jpeg";
 import projectEcommerce from "@/assets/project-ecommerce.jpg";
+import projectAdvocacia from "@/assets/advocacia.jpeg";
 import projectDashboard from "@/assets/project-dashboard.jpg";
 import "./ProjectsSection.css";
 
@@ -15,10 +16,18 @@ const ProjectsSection = () => {
       github: "https://github.com/carlosgodspeed/projeto-museu",
     },
     {
-      title: "Suprema Jurídica",
+      title: "Vogue Vault",
       category: "Site Institucional",
-      description: "Website profissional para escritório de advocacia com foco em conversão e credibilidade digital.",
+      description: "Website profissional para Loja de Roupas Feminina com foco em conversão e credibilidade digital.",
       image: projectEcommerce,
+      link: "https://github.com/carlosgodspeed/vogue-vault",
+      github: "https://github.com/carlosgodspeed/vogue-vault",
+    },
+    {
+      title: "Advocacia",
+      category: "Site Institucional",
+      description: "Website profissional para Escritório de Advocacia com foco em conversão e credibilidade digital.",
+      image: projectAdvocacia,
       link: "https://lading-page-advocacia.vercel.app/",
       github: "https://github.com/carlosgodspeed/Lading-page-Advocacia",
     },

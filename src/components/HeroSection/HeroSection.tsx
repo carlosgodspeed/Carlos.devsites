@@ -9,7 +9,7 @@ const HeroSection = () => {
 
       <div className="hero__content">
         <h1 className="hero__title animate-fade-in-up delay-2">
-          A presença digital que sua marca <span className="gradient-text">merece</span>.
+          A presença digital que sua marca <span className="gradient-text">merece</span>
         </h1>
 
         <p className="hero__subtitle animate-fade-in-up delay-3">
